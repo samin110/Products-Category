@@ -1,0 +1,78 @@
+.App {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  height: 100vh;
+}
+
+.App h1 {
+  display: grid;
+  grid-column: 3/7;
+  justify-content: center;
+  align-items: center;
+  color: #e9f1f7;
+}
+.select-icon {
+  display: grid;
+  grid-row: 2/6;
+  grid-column: 1/3;
+  justify-content: center;
+}
+
+.select-icon span {
+  color: #e5e5e5;
+}
+
+.placeholder-color {
+  color: #e5e5e5;
+}
+
+.input-add-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-add-group label {
+  margin-top: 60px;
+  color: #e5e5e5;
+  text-align: right;
+}
+
+.input-add-group input {
+  padding: 8px;
+  margin-top: px;
+  background-color: #e5e5e5;
+  font-family: "vazir";
+  outline: none;
+  text-align: right;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.btn {
+  padding: 2px;
+  cursor: pointer;
+  background-color: #e5e5e5;
+  color: #14213d;
+  font-size: 10px;
+  font-family: "vazir";
+  border: 1px solid;
+  border-radius: 3px;
+  width: 85px;
+  margin-top: 5px;
+}
+
+.select-elements {
+  width: 150%;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-elements div {
+  text-align: right;
+}
+/* https://coolors.co/000000-14213d-fca311-e5e5e5-ffffff */
+
+.bcg-color {
+  background-color: #34a853;
+}
