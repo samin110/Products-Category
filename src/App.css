@@ -76,3 +76,32 @@
 .bcg-color {
   background-color: #34a853;
 }
+
+/* .products-value {
+  display: grid;
+  grid-column: 1/3;
+  justify-content: center;
+  grid-row: 5/6;
+  align-items: center;
+  color: #e9f1f7;
+  font-size: 16px;
+  margin-bottom: 65px;
+}
+
+.products-value label {
+  text-align: right;
+  width: 150%;
+}
+
+.products-value input {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 8px;
+  background-color: #e5e5e5;
+  font-family: "vazir";
+  outline: none;
+  text-align: right;
+  border: 1px solid;
+  border-radius: 3px;
+  width: 150%;
+} */
