@@ -3,6 +3,7 @@ import Select from 'react-select';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useRef } from 'react';
+import AddToProducts from './AddToProducts';
 
 const options = [
 	{ value: 'dairy', label: 'Dairy' },
@@ -11,14 +12,12 @@ const options = [
 ];
 
 
-const SelectComponent = () => {
+const SelectComponent = ({ selectedValueHandler, getGroupName }) => {
 	const [addToGroup, setAddToGroup] = useState(options);
 	const [getValue, setGetValue] = useState({
 		value: '',
 		label: ''
 	});
-
-
 	const inputRef = useRef();
 
 	// Save & Show input value in selectOption when click button
@@ -37,11 +36,6 @@ const SelectComponent = () => {
 		setGetValue({ ...getValue, value: e.target.value, label: e.target.value });
 	}
 
-	// Get value from click on select options
-	const selectedValueHandler = (e) => {
-		console.log(e.value);
-	}
-
 	return (
 		<div className="select-icon">
 			<div className="select-elements">
@@ -56,7 +50,8 @@ const SelectComponent = () => {
 				<div className="input-add-group">
 					<label>نام گروه جدید</label>
 					<input type="text" name="value" onChange={inputHandler} ref={inputRef} />
-					<button className="btn" onClick={addToSelectHandler}>اضافه به محصولات </button>
+					<button className="btn" onClick={addToSelectHandler}>اضافه به طبقه بندی</button>
+					<AddToProducts getGroupName={getGroupName} />
 				</div>
 			</div>
 		</div>
