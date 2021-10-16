@@ -1,26 +1,27 @@
 import './App.css';
 import { ToastContainer } from 'react-toastify';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import 'react-toastify/dist/ReactToastify.css';
 import SelectComponent from './Components/SelectComponent';
-import AddToProducts from './Components/AddToProducts';
+import ShowProducts from './Components/ShowProducts';
 
 function App() {
-  const [addToProducts, setAddToProducts] = useState({});
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
-  //		Get value from click on select options
-
-
-  const selectedValueHandler = (e) => {
-    setAddToProducts({ ...addToProducts, e })
+  const getFiltered = (e) => {
+    setFilteredProducts(e);
   }
-
 
   return (
     <div className="App">
       <h1>طبقه بندی محصولات فروشگاه</h1>
-      <SelectComponent selectedValueHandler={selectedValueHandler} getGroupName={addToProducts} />
-      <ToastContainer position="top-left" rtl={true} />
+      <ToastContainer position="top-left" rtl={true} autoClose={2000} />
+      <div className="left-component">
+        <SelectComponent getFiltered={getFiltered} />
+      </div>
+      <div className="right-component">
+        <ShowProducts filteredProducts={filteredProducts} />
+      </div>
     </div>
   );
 }
