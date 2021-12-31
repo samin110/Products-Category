@@ -13,7 +13,10 @@
 }
 
 body {
-  background-color: #050c3f;
+  /* background-color: #050c3f; */
+  background: url(../src/assets/img/vecteezy_online-shopping-on-phone-buy-sell-business-digital-web_4299823.jpg)
+    no-repeat;
+  background-size: 100vw 100vh;
   font-family: "vazir";
 }
 
